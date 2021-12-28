@@ -1,0 +1,79 @@
+weight = 4;
+
+#Ground Shipping
+if weight >= 10:
+  grnd_cost = 4.75
+elif weight >= 6:
+  grnd_cost = 4.00
+elif weight >= 2:
+  grnd_cost = 3.00
+else:
+  grnd_cost = 1.50
+
+cost_ground = (weight * grnd_cost) + 20.00
+
+print(cost_ground)
+
+cost_ground_premium = 125.00
+
+# Drone Shipping
+if weight >= 10:
+  cost = 14.25
+elif weight >= 6:
+  cost = 12.00
+elif weight >= 2:
+  cost = 9.00
+else:
+  cost = 4.50
+
+cost_drone = weight * cost 
+#Testing 4.8 pound of package
+print()
+print("comparing cost")
+weight = 4.8
+cost_ground = (weight * grnd_cost) + 20.00
+cost_drone = weight * cost 
+print("The Ground cost of ", weight ," pound of package is ", cost_ground)
+print("Ground premium shipping ", cost_ground_premium)
+print("The Drone cost of ", weight ," pound of package is ",cost_drone)
+print()
+if cost_ground > cost_drone:
+  print("Drone shipping is the cheapest for 4.8 pound package")
+else:
+  print("Ground shipping is the cheapest for 4.8 pound package")
+
+#Testing 41.5 pound of package
+print()
+print("comparing cost")
+weight2 = 41.5
+#Ground Shipping
+if weight2 >= 10:
+  grnd_cost = 4.75
+elif weight2 >= 6:
+  grnd_cost = 4.00
+elif weight2 >= 2:
+  grnd_cost = 3.00
+else:
+  grnd_cost = 1.50
+
+
+# Drone Shipping
+if weight2 >= 10:
+  cost = 14.25
+elif weight2 >= 6:
+  cost = 12.00
+elif weight2 >= 2:
+  cost = 9.00
+else:
+  cost = 4.50
+
+cost_ground2 = (weight2 * grnd_cost) + 20.00
+cost_drone2 = weight2 * cost 
+print("The Ground cost of ", weight2 ," pound of package is ", cost_ground2)
+print("Ground premium shipping ", cost_ground_premium)
+print("The Drone cost of ", weight2 ," pound of package is ",cost_drone2)
+print()
+if cost_ground2 > cost_drone2:
+  print("Drone shipping is the cheapest for ", weight," 2 pound package")
+else:
+  print("Ground shipping is the cheapest for ", weight2, " pound package")
